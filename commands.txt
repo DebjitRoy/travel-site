@@ -49,3 +49,28 @@ Install Webpack and Webpack CLI in the App
 i. Create a new file webpack.config.js at the root of the app and set entry point of the file location (see webpack.config.js)
 ii. Add a script in package.json to execute webpack (see package.json)
 iii. execute the npm script > npm run dev
+
+	> npm i webpack-dev-server
+
+iv. Web pack dev server can be used to run our app live, and any change in js, css or html will be immediately reflected.
+	For that, add the following prop in webpack.config export
+
+	devServer: {
+		before: function (app, server) {
+			// needed for html reload
+			server._watch("./app/**/*.html");
+		},
+		contentBase: path.join(__dirname, "app"),
+		hot: true,
+		port: 3000,
+		// to check in other devices
+		// use laptop's ipv4 address : 3000 
+		// 192.168.0.15:3000
+		host: "0.0.0.0",
+	},
+
+	Also, in pakage.json, add script to run dev server
+	"scripts": {
+    	"dev": "webpack-dev-server",
+	}
+
