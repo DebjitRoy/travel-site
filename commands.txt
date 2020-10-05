@@ -1,0 +1,51 @@
+==================================================================================
+				GIT Commands
+==================================================================================
+
+1. Create a new file in command line
+	> touch "index.html"
+
+2. Initialize empty Repo
+	go to the directory
+	> git init
+3. > git status
+
+4. Adding unstated files 
+	>git add .
+
+5. Committing files to be tracked by git
+	> git commit -m 'some txt'	
+
+6. Rolling back/ Restore code to last committed state:
+	For All files
+	> git checkout -- . 
+	For Selected Files
+	> git checkout -- index.html
+
+7. Cloning Repo from server
+	> git clone https://github.com/LearnWebCode/welcome-to-git.git
+
+8. Check where the current repo is pointing to for fetch and push
+	> git remote -v
+	o/p:
+	origin  https://github.com/LearnWebCode/travel-site-files.git (fetch)
+	origin  https://github.com/LearnWebCode/travel-site-files.git (push) 
+
+9. Setting remote to our own GitHub repo
+	> git remote set-url origin https://github.com/DebjitRoy/travel-site.git
+
+10. Pushing code to our own repo
+	> git push origin master 
+
+
+==================================================================================
+				WebPack Commands
+==================================================================================
+
+Install Webpack and Webpack CLI in the App
+
+	> npm i webpack webpack-cli
+
+i. Create a new file webpack.config.js at the root of the app and set entry point of the file location (see webpack.config.js)
+ii. Add a script in package.json to execute webpack (see package.json)
+iii. execute the npm script > npm run dev
