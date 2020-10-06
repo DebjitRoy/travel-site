@@ -42,7 +42,14 @@
 
 11. > git branch
 	shows current branch. by default, master
-	
+
+12.	creating new branch - creating a new branch named "custom"
+	> git branch custom
+
+13. Switching to other branch
+	> git checkout custom
+
+
 
 
 ==================================================================================
