@@ -49,6 +49,15 @@
 13. Switching to other branch
 	> git checkout custom
 
+	Now we can make our changes in the branch and commit. this will only commit to the current branch
+	Master would remain unaffected.
+
+	Now once the branch is completed, we can merge into master by:
+	> git checkout master
+	> git merge custom
+
+14. Delete branch from repo
+	> git branch -d custom
 
 
 
